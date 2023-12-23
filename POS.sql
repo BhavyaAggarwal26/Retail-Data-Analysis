@@ -35,7 +35,7 @@ USE POS
 		from Transactions
 		order by YYYY , MM , dd)abc
 
---Q5 Which product category does the sub-category “DIY” belong to?
+--Q5 Which product category does the sub-category â€œDIYâ€ belong to?
 	 select prod_cat 
 	 from prod_cat_info
 	 where prod_subcat = 'DIY'
@@ -100,7 +100,7 @@ USE POS
 	 group by b.customer_Id) abc
 	 where transaction_count > 10
 
---Q8 What is the combined revenue earned from the “Electronics” & “Clothing” categories, from “Flagship stores”?
+--Q8 What is the combined revenue earned from the â€œElectronicsâ€ & â€œClothingâ€ categories, from â€œFlagship storesâ€?
  
 	 select round(sum(total_amt),0) Total_revenue
 	 from Transactions a
@@ -110,7 +110,7 @@ USE POS
 		  and
 		  a.Store_type = 'Flagship stores'
 
---Q9 What is the total revenue generated from “Male” customers in “Electronics” category? Output should display total revenue by prod sub-cat.
+--Q9 What is the total revenue generated from â€œMaleâ€ customers in â€œElectronicsâ€ category? Output should display total revenue by prod sub-cat.
 	 
 	 select b.prod_subcat, round(sum(total_amt),0) Total_revenue
 	 from Transactions a
